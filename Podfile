@@ -6,10 +6,11 @@ target 'SpartanDrive' do
   use_frameworks!
 
   # Pods for SpartanDrive
-  pod 'Firebase'
+  pod 'Firebase/Core'
   pod 'GoogleSignIn'
   pod 'FacebookCore'
   pod 'FacebookLogin'
   pod 'FacebookShare' 
+  pod 'FirebaseUI'
 
 end
