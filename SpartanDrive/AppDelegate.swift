@@ -12,7 +12,7 @@ import Firebase
 import FirebaseUI
 import GoogleSignIn
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate,GIDSignInDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
     func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!,
               withError error: Error!) {
         if let error = error {
@@ -27,6 +27,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate,GIDSignInDelegate {
             let email = user.profile.email
             // ...
         }
+        
+//        if let authentication = user.authentication {
+//            let credential = GoogleAuthProvider.credential(withIDToken: authentication.idToken, accessToken: authentication.accessToken)
+//            
+//            Auth.auth().signInAndRetrieveData(with: credential, completion: { (user, error) -> Void in
+//                if error != nil {
+//                    print("Sign In Failure")
+//                } else if error == nil {
+//                    print("user successfully signed in through GOOGLE! uid:\(Auth.auth().currentUser!.uid)")
+//                    print("Sign In Success")
+//                    
+//                }
+//            })
+//        }
+//    }
     }
     func sign(_ signIn: GIDSignIn!, didDisconnectWith user: GIDGoogleUser!, withError error: Error!) {
         // Perform any operations when the user disconnects from app here.
