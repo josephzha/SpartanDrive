@@ -12,12 +12,19 @@ import Firebase
 import GoogleSignIn
 
 class ViewController: UIViewController, GIDSignInUIDelegate {
-
+    let image = UIImage (named: "spartan.png")
+    var imageView : UIImageView!
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
-    @IBOutlet weak var loginButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        // spartan logo
+        imageView = UIImageView(frame: CGRect(x: 163, y: 77, width: 53, height: 53))
+        imageView.contentMode = .scaleAspectFit
+        imageView.image = image
+        view.addSubview(imageView)
+        
         //fb signin button
         let loginButton = LoginButton(readPermissions: [ .publicProfile,.email ])
         loginButton.center = view.center

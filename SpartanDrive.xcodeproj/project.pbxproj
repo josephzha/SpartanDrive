@@ -14,6 +14,7 @@
 		1CB685C7215C50C200558D7A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1CB685C6215C50C200558D7A /* Assets.xcassets */; };
 		1CB685CA215C50C200558D7A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1CB685C8215C50C200558D7A /* LaunchScreen.storyboard */; };
 		8B9635A4CE5A30BFDAB22288 /* Pods_SpartanDrive.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD8BFE14A5A7C89210C09980 /* Pods_SpartanDrive.framework */; };
+		F54CF890217EC1CA000779B3 /* spartan.png in Resources */ = {isa = PBXBuildFile; fileRef = F54CF88F217EC1CA000779B3 /* spartan.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		1CB685CB215C50C200558D7A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4B544A18D6F6DC6094635F01 /* Pods-SpartanDrive.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpartanDrive.release.xcconfig"; path = "Pods/Target Support Files/Pods-SpartanDrive/Pods-SpartanDrive.release.xcconfig"; sourceTree = "<group>"; };
 		DD8BFE14A5A7C89210C09980 /* Pods_SpartanDrive.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SpartanDrive.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F54CF88F217EC1CA000779B3 /* spartan.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spartan.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 		1CB685BE215C50C000558D7A /* SpartanDrive */ = {
 			isa = PBXGroup;
 			children = (
+				F54CF88F217EC1CA000779B3 /* spartan.png */,
 				1CB685BF215C50C000558D7A /* AppDelegate.swift */,
 				1CB685C1215C50C000558D7A /* ViewController.swift */,
 				1CB685C3215C50C000558D7A /* Main.storyboard */,
@@ -156,6 +159,7 @@
 				1CB00BC8215F7C3500EC18B1 /* GoogleService-Info.plist in Resources */,
 				1CB685C7215C50C200558D7A /* Assets.xcassets in Resources */,
 				1CB685C5215C50C000558D7A /* Main.storyboard in Resources */,
+				F54CF890217EC1CA000779B3 /* spartan.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
