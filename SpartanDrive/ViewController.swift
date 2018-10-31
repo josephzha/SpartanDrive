@@ -26,13 +26,11 @@ class ViewController: UIViewController, GIDSignInUIDelegate {
         view.addSubview(imageView)
         
         //fb signin button
-        let loginButton = LoginButton(readPermissions: [ .publicProfile,.email ])
-        loginButton.center = view.center
-        view.addSubview(loginButton)
+//        let loginButton = LoginButton(readPermissions: [ .publicProfile,.email ])
+//        loginButton.center = view.center
+//        view.addSubview(loginButton)
     
-        //google sign in
-        GIDSignIn.sharedInstance().uiDelegate = self
-        GIDSignIn.sharedInstance().signInSilently()
+        // Google Login Segue.
         print(GIDSignIn.sharedInstance()?.hasAuthInKeychain(), true ?? false)
 
         if GIDSignIn.sharedInstance().hasAuthInKeychain() {
@@ -42,6 +40,9 @@ class ViewController: UIViewController, GIDSignInUIDelegate {
         else {
             print("Sign In Failure")
         }
+        
+        // Facebook Login Segue.
+        
     }
     
 //    @IBAction func signInSegue(_ sender: Any) {
@@ -54,11 +55,28 @@ class ViewController: UIViewController, GIDSignInUIDelegate {
 //            print("Sign In Failure")
 //        }
 //    }
-
+    
+    // Custom Google Sign In Button.
+    @IBAction func googleSignIn(_ sender: Any) {
+        GIDSignIn.sharedInstance().uiDelegate=self
+        GIDSignIn.sharedInstance().signIn()
+    }
+    
+    // Custom Google Sign Out Button.
     @IBAction func didTapSignOut(_ sender: UIButton) {
         GIDSignIn.sharedInstance().signOut()
         print("Sign Out Success")
     }
     
+    // Custom Facebook Sign In Button.
+    
+    // Custom Facebook Sign Out Button.
+    
 }
+
+
+
+
+
+
 
