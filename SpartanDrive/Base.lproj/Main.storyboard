@@ -123,10 +123,10 @@
             </objects>
             <point key="canvasLocation" x="-58.399999999999999" y="102.70935960591133"/>
         </scene>
-        <!--View Controller-->
+        <!--Facebook View Controller-->
         <scene sceneID="mDu-Kh-BrQ">
             <objects>
-                <viewController id="haW-bG-lkg" sceneMemberID="viewController">
+                <viewController id="haW-bG-lkg" customClass="facebookViewController" customModule="SpartanDrive" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="PaO-B5-0dS">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -190,11 +190,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2zd-Gw-AUi">
-                                <rect key="frame" x="16" y="170" width="343" height="338"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mNL-to-sjz">
                                 <rect key="frame" x="152" y="574" width="71" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -204,6 +199,9 @@
                                 <rect key="frame" x="149" y="639" width="77" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Upload File"/>
+                                <connections>
+                                    <action selector="uploadTapped:" destination="3uE-jo-aGO" eventType="touchUpInside" id="xLw-OQ-tZf"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rnd-kw-LJV">
                                 <rect key="frame" x="75" y="748" width="225" height="30"/>
@@ -233,11 +231,16 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Pih-aW-Z6L">
+                                <rect key="frame" x="16" y="162" width="343" height="290"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="o7Z-j6-Ifl"/>
                     </view>
                     <connections>
+                        <outlet property="uploadImage" destination="Pih-aW-Z6L" id="6Ft-UB-4cT"/>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="googleSegueOut" id="gMO-IY-NTN"/>
                     </connections>
                 </viewController>

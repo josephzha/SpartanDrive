@@ -14,7 +14,7 @@
 		<key>BoringSSL.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>14</integer>
+			<integer>15</integer>
 		</dict>
 		<key>FBSDKCoreKit.xcscheme</key>
 		<dict>

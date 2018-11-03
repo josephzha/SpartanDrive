@@ -16,7 +16,9 @@
 		8B9635A4CE5A30BFDAB22288 /* Pods_SpartanDrive.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD8BFE14A5A7C89210C09980 /* Pods_SpartanDrive.framework */; };
 		DA11FF28218A37D300744809 /* google.png in Resources */ = {isa = PBXBuildFile; fileRef = DA11FF27218A37CE00744809 /* google.png */; };
 		DA11FF2C218A416A00744809 /* facebook.png in Resources */ = {isa = PBXBuildFile; fileRef = DA11FF2B218A416900744809 /* facebook.png */; };
-		DA8526B8218BF550004540F9 /* googleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8526B7218BF550004540F9 /* googleViewController.swift */; };
+		DA8526BA218C1102004540F9 /* facebookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8526B9218C1102004540F9 /* facebookViewController.swift */; };
+		DA8526BC218C3B3A004540F9 /* googleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8526BB218C3B39004540F9 /* googleViewController.swift */; };
+		DAE0B513218D490B00EE8A15 /* earth.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DAE0B512218D490B00EE8A15 /* earth.jpg */; };
 		F54CF890217EC1CA000779B3 /* spartan.png in Resources */ = {isa = PBXBuildFile; fileRef = F54CF88F217EC1CA000779B3 /* spartan.png */; };
 /* End PBXBuildFile section */
 
@@ -33,7 +35,9 @@
 		4B544A18D6F6DC6094635F01 /* Pods-SpartanDrive.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpartanDrive.release.xcconfig"; path = "Pods/Target Support Files/Pods-SpartanDrive/Pods-SpartanDrive.release.xcconfig"; sourceTree = "<group>"; };
 		DA11FF26218A37CE00744809 /* en */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = en; path = en.lproj/google.png; sourceTree = "<group>"; };
 		DA11FF2B218A416900744809 /* facebook.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = facebook.png; sourceTree = "<group>"; };
-		DA8526B7218BF550004540F9 /* googleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = googleViewController.swift; sourceTree = "<group>"; };
+		DA8526B9218C1102004540F9 /* facebookViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = facebookViewController.swift; sourceTree = "<group>"; };
+		DA8526BB218C3B39004540F9 /* googleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = googleViewController.swift; sourceTree = "<group>"; };
+		DAE0B512218D490B00EE8A15 /* earth.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = earth.jpg; sourceTree = "<group>"; };
 		DD8BFE14A5A7C89210C09980 /* Pods_SpartanDrive.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SpartanDrive.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F54CF88F217EC1CA000779B3 /* spartan.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spartan.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -74,14 +78,16 @@
 				DA11FF2B218A416900744809 /* facebook.png */,
 				F54CF88F217EC1CA000779B3 /* spartan.png */,
 				DA11FF27218A37CE00744809 /* google.png */,
+				DAE0B512218D490B00EE8A15 /* earth.jpg */,
 				1CB685BF215C50C000558D7A /* AppDelegate.swift */,
 				1CB685C1215C50C000558D7A /* LoginViewController.swift */,
+				DA8526BB218C3B39004540F9 /* googleViewController.swift */,
+				DA8526B9218C1102004540F9 /* facebookViewController.swift */,
 				1CB685C3215C50C000558D7A /* Main.storyboard */,
 				1CB685C6215C50C200558D7A /* Assets.xcassets */,
 				1CB685C8215C50C200558D7A /* LaunchScreen.storyboard */,
 				1CB00BC7215F7C3500EC18B1 /* GoogleService-Info.plist */,
 				1CB685CB215C50C200558D7A /* Info.plist */,
-				DA8526B7218BF550004540F9 /* googleViewController.swift */,
 			);
 			path = SpartanDrive;
 			sourceTree = "<group>";
@@ -168,6 +174,7 @@
 				1CB00BC8215F7C3500EC18B1 /* GoogleService-Info.plist in Resources */,
 				1CB685C7215C50C200558D7A /* Assets.xcassets in Resources */,
 				DA11FF2C218A416A00744809 /* facebook.png in Resources */,
+				DAE0B513218D490B00EE8A15 /* earth.jpg in Resources */,
 				1CB685C5215C50C000558D7A /* Main.storyboard in Resources */,
 				DA11FF28218A37D300744809 /* google.png in Resources */,
 				F54CF890217EC1CA000779B3 /* spartan.png in Resources */,
@@ -308,8 +315,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA8526BA218C1102004540F9 /* facebookViewController.swift in Sources */,
+				DA8526BC218C3B3A004540F9 /* googleViewController.swift in Sources */,
 				1CB685C2215C50C000558D7A /* LoginViewController.swift in Sources */,
-				DA8526B8218BF550004540F9 /* googleViewController.swift in Sources */,
 				1CB685C0215C50C000558D7A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

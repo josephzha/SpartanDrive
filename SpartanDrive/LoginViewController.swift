@@ -34,15 +34,7 @@ class LoginViewController: UIViewController, GIDSignInUIDelegate {
             self.performSegue(withIdentifier: "googleSegueIn", sender: nil)
         }
         
-        // Google Logout Segue.
-//        if (!GIDSignIn.sharedInstance().hasAuthInKeychain()) {
-//            print("Google Sign Out Success")
-//            self.performSegue(withIdentifier: "googleSegueOut", sender: nil)
-//        }
-        
         // Facebook Login Segue.
-        
-        // Facebook Logout Segue.
     }
     
     // Upload File.
