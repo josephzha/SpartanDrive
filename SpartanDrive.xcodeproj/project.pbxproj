@@ -20,6 +20,7 @@
 		DA8526BC218C3B3A004540F9 /* googleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8526BB218C3B39004540F9 /* googleViewController.swift */; };
 		DAE0B513218D490B00EE8A15 /* earth.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DAE0B512218D490B00EE8A15 /* earth.jpg */; };
 		F54CF890217EC1CA000779B3 /* spartan.png in Resources */ = {isa = PBXBuildFile; fileRef = F54CF88F217EC1CA000779B3 /* spartan.png */; };
+		F5D8FF8F218F7E9600A6B7D9 /* MainPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D8FF8E218F7E9600A6B7D9 /* MainPageViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		DAE0B512218D490B00EE8A15 /* earth.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = earth.jpg; sourceTree = "<group>"; };
 		DD8BFE14A5A7C89210C09980 /* Pods_SpartanDrive.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SpartanDrive.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F54CF88F217EC1CA000779B3 /* spartan.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spartan.png; sourceTree = "<group>"; };
+		F5D8FF8E218F7E9600A6B7D9 /* MainPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +90,7 @@
 				1CB685C8215C50C200558D7A /* LaunchScreen.storyboard */,
 				1CB00BC7215F7C3500EC18B1 /* GoogleService-Info.plist */,
 				1CB685CB215C50C200558D7A /* Info.plist */,
+				F5D8FF8E218F7E9600A6B7D9 /* MainPageViewController.swift */,
 			);
 			path = SpartanDrive;
 			sourceTree = "<group>";
@@ -315,6 +318,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F5D8FF8F218F7E9600A6B7D9 /* MainPageViewController.swift in Sources */,
 				DA8526BA218C1102004540F9 /* facebookViewController.swift in Sources */,
 				DA8526BC218C3B3A004540F9 /* googleViewController.swift in Sources */,
 				1CB685C2215C50C000558D7A /* LoginViewController.swift in Sources */,

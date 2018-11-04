@@ -49,4 +49,8 @@ class LoginViewController: UIViewController, GIDSignInUIDelegate {
     @IBAction func facebookSignIn(_ sender: UIButton) {
         _ = LoginButton(readPermissions: [ .publicProfile,.email ])
     }
+    
+    @IBAction func emailSignIn(_ sender: Any) {
+        performSegue( withIdentifier: "signInSegue", sender: self)
+    }
 }
