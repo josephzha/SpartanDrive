@@ -11,15 +11,7 @@ import FacebookLogin
 import Firebase
 import GoogleSignIn
 
-class facebookViewController: UIViewController, GIDSignInUIDelegate {
-    
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-    }
+class facebookViewController: UIViewController {
     
     // Custom Facebook Sign Out Button. Go back to Login page.
     @IBAction func googleSignOut(_ sender: UIButton) {

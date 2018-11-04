@@ -19,7 +19,7 @@ class LoginViewController: UIViewController, GIDSignInUIDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        //fb signin button
+//        fb signin button
 //        let loginButton = LoginButton(readPermissions: [ .publicProfile,.email ])
 //        loginButton.center = view.center
 //        view.addSubview(loginButton)
@@ -37,8 +37,6 @@ class LoginViewController: UIViewController, GIDSignInUIDelegate {
         // Facebook Login Segue.
     }
     
-    // Upload File.
-    
     // Custom Google Sign In Button.
     @IBAction func googleSignIn(_ sender: UIButton) {
         GIDSignIn.sharedInstance().uiDelegate = self
@@ -50,6 +48,7 @@ class LoginViewController: UIViewController, GIDSignInUIDelegate {
         _ = LoginButton(readPermissions: [ .publicProfile,.email ])
     }
     
+    // Login with registered account information button.
     @IBAction func emailSignIn(_ sender: Any) {
         performSegue( withIdentifier: "signInSegue", sender: self)
     }
