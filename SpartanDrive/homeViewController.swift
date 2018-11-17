@@ -1,8 +1,8 @@
 //
-//  googleViewController.swift
+//  homeViewController.swift
 //  SpartanDrive
 //
-//  Created by Pierce Tu on 11/1/18.
+//  Created by Yilin Zhao on 11/16/18.
 //  Copyright © 2018 group11. All rights reserved.
 //
 
@@ -12,13 +12,17 @@ import Firebase
 import GoogleSignIn
 import FirebaseStorage
 
-class googleViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate, GIDSignInUIDelegate {
+class homeViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate, GIDSignInUIDelegate {
     
-    @IBOutlet weak var selectedImage: UIImageView!
-    @IBOutlet weak var uploadProgressBar: UIProgressView!
-    @IBOutlet weak var uploadProgressLabel: UILabel!
+//    @IBOutlet weak var selectedImage: UIImageView!
+//    @IBOutlet weak var uploadProgressBar: UIProgressView!
+//    @IBOutlet weak var uploadProgressLabel: UILabel!
     //let your_firebase_storage_bucket = FirebaseOptions.defaultOptions()?.storageBucket ?? ""
     
+    
+    @IBOutlet weak var uploadProgressLabel: UILabel!
+    @IBOutlet weak var uploadProgressBar: UIProgressView!
+    @IBOutlet weak var selectedImage: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -112,18 +116,10 @@ class googleViewController: UIViewController, UINavigationControllerDelegate, UI
     }
     
     // Custom Google Sign Out Button. Go back to Login page.
-    @IBAction func googleSignOut(_ sender: UIButton) {
-        GIDSignIn.sharedInstance().signOut()
-        print("Sign Out Success")
-        self.dismiss(animated: true)
+    @IBAction func SignOutTapped(_ sender: UIButton) {
+        performSegue(withIdentifier: "backtologin", sender: nil)
     }
     
     
+    
 }
-
-
-
-
-
-
-

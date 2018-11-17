@@ -8,6 +8,7 @@
 
 import UIKit
 import FacebookLogin
+import FBSDKLoginKit
 import Firebase
 import GoogleSignIn
 
@@ -19,37 +20,62 @@ class LoginViewController: UIViewController, GIDSignInUIDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-//        fb signin button
-//        let loginButton = LoginButton(readPermissions: [ .publicProfile,.email ])
-//        loginButton.center = view.center
-//        view.addSubview(loginButton)
+        GIDSignIn.sharedInstance()?.uiDelegate = self
         
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        
-        // Google Login Segue.
-        if (GIDSignIn.sharedInstance().hasAuthInKeychain()) {
-            print("Google Sign In Success")
-            self.performSegue(withIdentifier: "googleSegueIn", sender: nil)
-        }
-        
-        // Facebook Login Segue.
-    }
+
     
     // Custom Google Sign In Button.
     @IBAction func googleSignIn(_ sender: UIButton) {
-        GIDSignIn.sharedInstance().uiDelegate = self
         GIDSignIn.sharedInstance().signIn()
     }
 
     // Custom Facebook Sign In Button.
     @IBAction func facebookSignIn(_ sender: UIButton) {
-        _ = LoginButton(readPermissions: [ .publicProfile,.email ])
+        FBSDKLoginManager().logIn(withReadPermissions: ["email","public_profile"], from: self) { (result,error) in
+            if error != nil{
+                print("error with logging in fb:",error)
+                return
+            }
+            print("successfully logged in fb:",result?.token.tokenString)
+            // authenticate on firebase using fb token
+            let accessToken = FBSDKAccessToken.current()
+            guard let accessTokenString = accessToken?.tokenString else{return }
+            let credential = FacebookAuthProvider.credential(withAccessToken: accessTokenString)
+            Auth.auth().signInAndRetrieveData(with: credential) { (user, err) in
+                if err != nil{
+                    print("something wrong with FB user: ",err ?? "")
+                    return
+                }
+                print("successfully authenticated in with fb user: ",user ?? "")
+                self.performSegue(withIdentifier:"mainPageSegueIn" , sender: nil)
+                
+            }
     }
     
     // Login with registered account information button.
-    @IBAction func emailSignIn(_ sender: Any) {
-        performSegue( withIdentifier: "signInSegue", sender: self)
+    
+}
+    @IBAction func emaillogin(_ sender: UIButton) {
+        let email = emailTextField.text
+        let password = passwordTextField.text
+        Auth.auth().signIn(withEmail: email ?? "", password: password ?? "") { (result, error) in
+            if error != nil{
+                print("error during logging in with email",error)
+            }
+            print("successfully logged in with email")
+            self.performSegue(withIdentifier:"mainPageSegueIn" , sender: nil)
+        }
+    }
+    @IBAction func emailsignup(_ sender: UIButton) {
+        let email = emailTextField.text
+        let password = passwordTextField.text
+        Auth.auth().createUser(withEmail: email ?? "", password: password ?? "") { (result, error) in
+            if error != nil{
+                print("error during creating user with email",error)
+            }
+            guard let user = result?.user else { return }
+        }
     }
 }

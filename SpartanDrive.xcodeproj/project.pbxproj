@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1C27741E219F9D8C0006A6AF /* homeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C27741D219F9D8C0006A6AF /* homeViewController.swift */; };
 		1CB00BC8215F7C3500EC18B1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1CB00BC7215F7C3500EC18B1 /* GoogleService-Info.plist */; };
 		1CB685C0215C50C000558D7A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CB685BF215C50C000558D7A /* AppDelegate.swift */; };
 		1CB685C2215C50C000558D7A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CB685C1215C50C000558D7A /* LoginViewController.swift */; };
@@ -16,15 +17,13 @@
 		8B9635A4CE5A30BFDAB22288 /* Pods_SpartanDrive.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD8BFE14A5A7C89210C09980 /* Pods_SpartanDrive.framework */; };
 		DA053BDC2193ACE700925251 /* facebook.png in Resources */ = {isa = PBXBuildFile; fileRef = DA053BDB2193ACE700925251 /* facebook.png */; };
 		DA11FF28218A37D300744809 /* google.png in Resources */ = {isa = PBXBuildFile; fileRef = DA11FF27218A37CE00744809 /* google.png */; };
-		DA8526BA218C1102004540F9 /* facebookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8526B9218C1102004540F9 /* facebookViewController.swift */; };
-		DA8526BC218C3B3A004540F9 /* googleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8526BB218C3B39004540F9 /* googleViewController.swift */; };
 		DAE0B513218D490B00EE8A15 /* earth.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DAE0B512218D490B00EE8A15 /* earth.jpg */; };
 		F54CF890217EC1CA000779B3 /* spartan.png in Resources */ = {isa = PBXBuildFile; fileRef = F54CF88F217EC1CA000779B3 /* spartan.png */; };
-		F5D8FF8F218F7E9600A6B7D9 /* MainPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D8FF8E218F7E9600A6B7D9 /* MainPageViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0CC55C4AD40DE22CEACAFE79 /* Pods-SpartanDrive.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpartanDrive.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SpartanDrive/Pods-SpartanDrive.debug.xcconfig"; sourceTree = "<group>"; };
+		1C27741D219F9D8C0006A6AF /* homeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = homeViewController.swift; sourceTree = "<group>"; };
 		1CB00BC7215F7C3500EC18B1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		1CB685BC215C50C000558D7A /* SpartanDrive.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpartanDrive.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1CB685BF215C50C000558D7A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -36,12 +35,9 @@
 		4B544A18D6F6DC6094635F01 /* Pods-SpartanDrive.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpartanDrive.release.xcconfig"; path = "Pods/Target Support Files/Pods-SpartanDrive/Pods-SpartanDrive.release.xcconfig"; sourceTree = "<group>"; };
 		DA053BDB2193ACE700925251 /* facebook.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = facebook.png; sourceTree = "<group>"; };
 		DA11FF26218A37CE00744809 /* en */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = en; path = en.lproj/google.png; sourceTree = "<group>"; };
-		DA8526B9218C1102004540F9 /* facebookViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = facebookViewController.swift; sourceTree = "<group>"; };
-		DA8526BB218C3B39004540F9 /* googleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = googleViewController.swift; sourceTree = "<group>"; };
 		DAE0B512218D490B00EE8A15 /* earth.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = earth.jpg; sourceTree = "<group>"; };
 		DD8BFE14A5A7C89210C09980 /* Pods_SpartanDrive.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SpartanDrive.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F54CF88F217EC1CA000779B3 /* spartan.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spartan.png; sourceTree = "<group>"; };
-		F5D8FF8E218F7E9600A6B7D9 /* MainPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,14 +79,12 @@
 				DAE0B512218D490B00EE8A15 /* earth.jpg */,
 				1CB685BF215C50C000558D7A /* AppDelegate.swift */,
 				1CB685C1215C50C000558D7A /* LoginViewController.swift */,
-				DA8526BB218C3B39004540F9 /* googleViewController.swift */,
-				DA8526B9218C1102004540F9 /* facebookViewController.swift */,
 				1CB685C3215C50C000558D7A /* Main.storyboard */,
+				1C27741D219F9D8C0006A6AF /* homeViewController.swift */,
 				1CB685C6215C50C200558D7A /* Assets.xcassets */,
 				1CB685C8215C50C200558D7A /* LaunchScreen.storyboard */,
 				1CB00BC7215F7C3500EC18B1 /* GoogleService-Info.plist */,
 				1CB685CB215C50C200558D7A /* Info.plist */,
-				F5D8FF8E218F7E9600A6B7D9 /* MainPageViewController.swift */,
 			);
 			path = SpartanDrive;
 			sourceTree = "<group>";
@@ -318,11 +312,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F5D8FF8F218F7E9600A6B7D9 /* MainPageViewController.swift in Sources */,
-				DA8526BA218C1102004540F9 /* facebookViewController.swift in Sources */,
-				DA8526BC218C3B3A004540F9 /* googleViewController.swift in Sources */,
 				1CB685C2215C50C000558D7A /* LoginViewController.swift in Sources */,
 				1CB685C0215C50C000558D7A /* AppDelegate.swift in Sources */,
+				1C27741E219F9D8C0006A6AF /* homeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

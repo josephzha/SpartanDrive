@@ -99,6 +99,9 @@
                                 <state key="normal" title="Sign Up">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="emailsignup:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2Wb-Tl-s5a"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j1i-Yg-RvD">
                                 <rect key="frame" x="85" y="450" width="112" height="30"/>
@@ -108,7 +111,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="emailSignIn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Cd4-wQ-gWi"/>
+                                    <action selector="emaillogin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bJj-nc-ya5"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -118,196 +121,79 @@
                     <connections>
                         <outlet property="emailTextField" destination="X0h-nQ-D5k" id="WwZ-8m-Is5"/>
                         <outlet property="passwordTextField" destination="K04-fC-bRl" id="P3c-VM-2kf"/>
-                        <segue destination="3uE-jo-aGO" kind="show" identifier="googleSegueIn" id="ZC6-Vo-KOG"/>
-                        <segue destination="haW-bG-lkg" kind="show" identifier="facebookSegueIn" id="dqF-tj-zC8"/>
-                        <segue destination="UFB-Hd-cID" kind="presentation" identifier="signInSegue" id="fpC-wi-TQl"/>
+                        <segue destination="j2Z-jX-BGe" kind="show" identifier="mainPageSegueIn" id="cEN-xv-2gq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-58.399999999999999" y="102.70935960591133"/>
         </scene>
-        <!--Main Page View Controller-->
-        <scene sceneID="Db5-8G-Agj">
+        <!--Home View Controller-->
+        <scene sceneID="m1y-KS-Z1F">
             <objects>
-                <viewController id="UFB-Hd-cID" customClass="MainPageViewController" customModule="SpartanDrive" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="E07-RO-cl0">
+                <viewController storyboardIdentifier="homepage" id="j2Z-jX-BGe" customClass="homeViewController" customModule="SpartanDrive" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xih-3j-aC4">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KDa-1g-zVS">
-                                <rect key="frame" x="22" y="44" width="34" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wwT-8E-KQK">
+                                <rect key="frame" x="157" y="734" width="60" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Back"/>
+                                <state key="normal" title="Sign Out"/>
                                 <connections>
-                                    <action selector="backButton:" destination="UFB-Hd-cID" eventType="touchUpInside" id="iwb-cY-Xlj"/>
+                                    <action selector="SignOutTapped:" destination="j2Z-jX-BGe" eventType="touchUpInside" id="03B-8j-pHr"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="c3k-ac-86Z">
-                                <rect key="frame" x="8" y="194" width="359" height="189"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="File Upload" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bjb-eh-rId">
+                                <rect key="frame" x="144" y="94" width="86" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BUa-dp-e81">
-                                <rect key="frame" x="163" y="708" width="49" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Upload"/>
-                                <connections>
-                                    <action selector="upload:" destination="UFB-Hd-cID" eventType="touchUpInside" id="9c1-5N-PVa"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BR5-fi-E5m">
-                                <rect key="frame" x="314" y="44" width="44" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Select"/>
-                                <connections>
-                                    <action selector="onSelectTapped:" destination="UFB-Hd-cID" eventType="touchUpInside" id="WeX-d6-2g5"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="nlU-71-CCw"/>
-                    </view>
-                    <connections>
-                        <outlet property="theImageView" destination="c3k-ac-86Z" id="sUm-s3-SdG"/>
-                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="backSegue" id="O8w-NE-EyT"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="smV-Rt-0Xc" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-146.40000000000001" y="-624.38423645320199"/>
-        </scene>
-        <!--Facebook View Controller-->
-        <scene sceneID="mDu-Kh-BrQ">
-            <objects>
-                <viewController id="haW-bG-lkg" customClass="facebookViewController" customModule="SpartanDrive" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="PaO-B5-0dS">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="File Upload" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Wo-7h-Me1">
-                                <rect key="frame" x="100" y="147" width="174" height="42"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="saR-5m-myR">
-                                <rect key="frame" x="16" y="225" width="343" height="253"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xG0-h8-JqI">
+                                <rect key="frame" x="67" y="236" width="240" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SxL-xp-Ams">
-                                <rect key="frame" x="152" y="574" width="71" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Select File"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kgc-y2-KLy">
-                                <rect key="frame" x="149" y="639" width="71" height="30"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ww3-HY-lZ7">
+                                <rect key="frame" x="152" y="432" width="71" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Select File"/>
+                                <connections>
+                                    <action selector="selectTapped:" destination="j2Z-jX-BGe" eventType="touchUpInside" id="B3w-mr-2yd"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mey-Rl-Y7S">
-                                <rect key="frame" x="75" y="748" width="225" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.23137254900000001" green="0.34901960780000002" blue="0.59607843140000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title=" Facebook Sign Out" image="facebook.png">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="1"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
-                                        <integer key="value" value="1"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToButton" value="YES"/>
-                                </userDefinedRuntimeAttributes>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="JHi-T6-KO9"/>
-                    </view>
-                    <connections>
-                        <segue destination="BYZ-38-t0r" kind="show" identifier="facebookSegueOut" id="k9P-Th-Uge"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="TIp-mA-GyQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="985" y="-623"/>
-        </scene>
-        <!--Google View Controller-->
-        <scene sceneID="d7K-db-lzG">
-            <objects>
-                <viewController id="3uE-jo-aGO" customClass="googleViewController" customModule="SpartanDrive" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="YWP-KW-5Dy">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mNL-to-sjz">
-                                <rect key="frame" x="152" y="574" width="71" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Select File"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GOc-gi-hcI">
-                                <rect key="frame" x="149" y="639" width="77" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lek-rq-5l0">
+                                <rect key="frame" x="149" y="544" width="77" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Upload File"/>
                                 <connections>
-                                    <action selector="uploadTapped:" destination="3uE-jo-aGO" eventType="touchUpInside" id="xLw-OQ-tZf"/>
+                                    <action selector="uploadTapped:" destination="j2Z-jX-BGe" eventType="touchUpInside" id="sUV-1U-4Hw"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rnd-kw-LJV">
-                                <rect key="frame" x="75" y="748" width="225" height="30"/>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="I0Q-7y-ZyH">
+                                <rect key="frame" x="112" y="398" width="150" height="2"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.85882352939999995" green="0.1960784314" blue="0.21176470589999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <state key="normal" title=" Google Sign Out" image="google.png">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="1"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
-                                        <integer key="value" value="1"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToButton" value="YES"/>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="googleSignOut:" destination="3uE-jo-aGO" eventType="touchUpInside" id="T9v-Gi-aDe"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="File Upload" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lGr-nh-BnS">
-                                <rect key="frame" x="100" y="84" width="174" height="42"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Pih-aW-Z6L">
-                                <rect key="frame" x="16" y="162" width="343" height="290"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
+                            </progressView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="o7Z-j6-Ifl"/>
+                        <viewLayoutGuide key="safeArea" id="KsO-GP-Knl"/>
                     </view>
                     <connections>
-                        <outlet property="uploadImage" destination="Pih-aW-Z6L" id="6Ft-UB-4cT"/>
-                        <segue destination="BYZ-38-t0r" kind="show" identifier="googleSegueOut" id="gMO-IY-NTN"/>
+                        <outlet property="selectedImage" destination="xG0-h8-JqI" id="QJ3-Nb-9Q4"/>
+                        <outlet property="uploadProgressBar" destination="I0Q-7y-ZyH" id="mms-2r-FCz"/>
+                        <outlet property="uploadProgressLabel" destination="bjb-eh-rId" id="yMt-tG-BO7"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="backtologin" id="Wk6-Zh-F8G"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="bNo-pU-DnH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ukh-fm-DO3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="984.79999999999995" y="102.70935960591133"/>
+            <point key="canvasLocation" x="1797.5999999999999" y="3.6945812807881775"/>
         </scene>
     </scenes>
     <resources>
-        <image name="facebook.png" width="25" height="18"/>
+        <image name="facebook.png" width="18" height="18"/>
         <image name="google.png" width="18" height="18"/>
         <image name="spartan.png" width="225" height="225"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="O8w-NE-EyT"/>
-    </inferredMetricsTieBreakers>
 </document>

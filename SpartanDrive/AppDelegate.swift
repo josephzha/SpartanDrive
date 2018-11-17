@@ -42,6 +42,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
             }
             guard let uid = user?.userID else { return }
             print("Firebase User Create with Google Success: ", uid)
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let scheduleController = storyboard.instantiateViewController(withIdentifier: "homepage")
+            self.window!.rootViewController = scheduleController
+            self.window!.makeKeyAndVisible()
+            
         }
     }
     
