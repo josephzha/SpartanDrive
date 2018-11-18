@@ -21,13 +21,10 @@ class homeViewController: UIViewController, UINavigationControllerDelegate, UIIm
     
     
     @IBOutlet weak var uploadProgressLabel: UILabel!
-    @IBOutlet weak var uploadProgressBar: UIProgressView!
     @IBOutlet weak var selectedImage: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        self.uploadProgressBar.progress = 0.0
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -51,34 +48,11 @@ class homeViewController: UIViewController, UINavigationControllerDelegate, UIIm
             selectedImage.image = image
         }
         else {
-            // ERROR MESSAGE
+            print("Error selecting an image")
         }
         
         self.dismiss(animated: true, completion: nil)
     }
-    
-    // Moving Progress Bar Look.
-    //    @objc func movingProgressBar() {
-    //
-    //        var recievedData : Float
-    //        var expectedTotalSize : Float
-    //        var actual : Float = uploadProgressBar.progress
-    //        if (actual < 1) {
-    //            uploadProgressBar.progress = actual + (recievedData/expectedTotalSize)
-    //            Timer.scheduledTimer(timeInterval: 0.05, invocation: self, repeats: false)
-    //        }
-    //    }
-    //
-    // Upload Progress Conversion.
-    //    private func URLSession(session: URLSession, task: URLSessionTask, didSendBodyData bytesSent: Int64, totalBytesSent: Int64, totalBytesExpectedToSend: Int64)
-    //    {
-    //        print("didSendBodyData")
-    //        let uploadProgress:Float = Float(totalBytesSent) / Float(totalBytesExpectedToSend)
-    //        uploadProgressBar.progress = uploadProgress
-    //        let progressPercent = Int(uploadProgress*100)
-    //        uploadProgressLabel.text = "\(progressPercent)%"
-    //        print(uploadProgress)
-    //    }
     
     // Select Image from Device.
     @IBAction func selectTapped(_ sender: UIButton) {
@@ -106,13 +80,18 @@ class homeViewController: UIViewController, UINavigationControllerDelegate, UIIm
             print(error ?? "NO ERROR")
         }
         
+        // UILabel for Upload in Progress.
         uploadTask.observe(.progress) { (snapshot) in
-            print(snapshot.progress ?? "NO MORE PROGRESS")
+            self.uploadProgressLabel.text = ("Uploading...")
+        }
+        
+        // UILabel for Upload Complete.
+        uploadTask.observe(.success) { (snapshot) in
+            self.uploadProgressLabel.text = ("Upload Complete")
+            print(snapshot.progress ?? "Upload Complete")
         }
         
         uploadTask.resume()
-        
-        //        uploadProgressBar.setProgress(uploadTask.progress, animated: true)
     }
     
     // Custom Google Sign Out Button. Go back to Login page.

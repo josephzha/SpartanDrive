@@ -46,7 +46,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
             let scheduleController = storyboard.instantiateViewController(withIdentifier: "homepage")
             self.window!.rootViewController = scheduleController
             self.window!.makeKeyAndVisible()
-            
         }
     }
     

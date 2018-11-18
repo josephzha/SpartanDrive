@@ -171,18 +171,20 @@
                                     <action selector="uploadTapped:" destination="j2Z-jX-BGe" eventType="touchUpInside" id="sUV-1U-4Hw"/>
                                 </connections>
                             </button>
-                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="I0Q-7y-ZyH">
-                                <rect key="frame" x="112" y="398" width="150" height="2"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Please Upload A File" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wsY-fb-bXX">
+                                <rect key="frame" x="79" y="666" width="237" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </progressView>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="KsO-GP-Knl"/>
                     </view>
                     <connections>
                         <outlet property="selectedImage" destination="xG0-h8-JqI" id="QJ3-Nb-9Q4"/>
-                        <outlet property="uploadProgressBar" destination="I0Q-7y-ZyH" id="mms-2r-FCz"/>
-                        <outlet property="uploadProgressLabel" destination="bjb-eh-rId" id="yMt-tG-BO7"/>
+                        <outlet property="uploadProgressLabel" destination="wsY-fb-bXX" id="Rc6-xy-fc3"/>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="backtologin" id="Wk6-Zh-F8G"/>
                     </connections>
                 </viewController>

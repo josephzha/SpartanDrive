@@ -20,14 +20,11 @@ class LoginViewController: UIViewController, GIDSignInUIDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        GIDSignIn.sharedInstance()?.uiDelegate = self
-        
     }
-    
-
     
     // Custom Google Sign In Button.
     @IBAction func googleSignIn(_ sender: UIButton) {
+        GIDSignIn.sharedInstance().uiDelegate = self
         GIDSignIn.sharedInstance().signIn()
     }
 
@@ -50,13 +47,10 @@ class LoginViewController: UIViewController, GIDSignInUIDelegate {
                 }
                 print("successfully authenticated in with fb user: ",user ?? "")
                 self.performSegue(withIdentifier:"mainPageSegueIn" , sender: nil)
-                
             }
     }
-    
-    // Login with registered account information button.
-    
 }
+    // Login with registered account information button.
     @IBAction func emaillogin(_ sender: UIButton) {
         let email = emailTextField.text
         let password = passwordTextField.text
