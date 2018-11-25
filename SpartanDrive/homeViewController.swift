@@ -92,6 +92,7 @@ class homeViewController: UIViewController, UINavigationControllerDelegate, UIIm
         }
         
         uploadTask.resume()
+        performSegue(withIdentifier: "folderSegue", sender: self)
     }
     
     // Custom Google Sign Out Button. Go back to Login page.
