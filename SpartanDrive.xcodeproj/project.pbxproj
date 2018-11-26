@@ -19,7 +19,7 @@
 		DA11FF28218A37D300744809 /* google.png in Resources */ = {isa = PBXBuildFile; fileRef = DA11FF27218A37CE00744809 /* google.png */; };
 		DAE0B513218D490B00EE8A15 /* earth.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DAE0B512218D490B00EE8A15 /* earth.jpg */; };
 		F51864C921AB300900C44D42 /* FoldersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F51864C821AB300900C44D42 /* FoldersViewController.swift */; };
-		F51864CB21AB41E800C44D42 /* source in Resources */ = {isa = PBXBuildFile; fileRef = F51864CA21AB41E800C44D42 /* source */; };
+		F51864CF21AB787400C44D42 /* TableTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F51864CE21AB787400C44D42 /* TableTableViewController.swift */; };
 		F54CF890217EC1CA000779B3 /* spartan.png in Resources */ = {isa = PBXBuildFile; fileRef = F54CF88F217EC1CA000779B3 /* spartan.png */; };
 /* End PBXBuildFile section */
 
@@ -40,7 +40,7 @@
 		DAE0B512218D490B00EE8A15 /* earth.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = earth.jpg; sourceTree = "<group>"; };
 		DD8BFE14A5A7C89210C09980 /* Pods_SpartanDrive.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SpartanDrive.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F51864C821AB300900C44D42 /* FoldersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoldersViewController.swift; sourceTree = "<group>"; };
-		F51864CA21AB41E800C44D42 /* source */ = {isa = PBXFileReference; lastKnownFileType = folder; path = source; sourceTree = "<group>"; };
+		F51864CE21AB787400C44D42 /* TableTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableTableViewController.swift; sourceTree = "<group>"; };
 		F54CF88F217EC1CA000779B3 /* spartan.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spartan.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -77,7 +77,6 @@
 		1CB685BE215C50C000558D7A /* SpartanDrive */ = {
 			isa = PBXGroup;
 			children = (
-				F51864CA21AB41E800C44D42 /* source */,
 				F54CF88F217EC1CA000779B3 /* spartan.png */,
 				DA11FF27218A37CE00744809 /* google.png */,
 				DA053BDB2193ACE700925251 /* facebook.png */,
@@ -91,6 +90,7 @@
 				1CB00BC7215F7C3500EC18B1 /* GoogleService-Info.plist */,
 				1CB685CB215C50C200558D7A /* Info.plist */,
 				F51864C821AB300900C44D42 /* FoldersViewController.swift */,
+				F51864CE21AB787400C44D42 /* TableTableViewController.swift */,
 			);
 			path = SpartanDrive;
 			sourceTree = "<group>";
@@ -178,7 +178,6 @@
 				1CB00BC8215F7C3500EC18B1 /* GoogleService-Info.plist in Resources */,
 				1CB685C7215C50C200558D7A /* Assets.xcassets in Resources */,
 				DAE0B513218D490B00EE8A15 /* earth.jpg in Resources */,
-				F51864CB21AB41E800C44D42 /* source in Resources */,
 				1CB685C5215C50C000558D7A /* Main.storyboard in Resources */,
 				DA11FF28218A37D300744809 /* google.png in Resources */,
 				F54CF890217EC1CA000779B3 /* spartan.png in Resources */,
@@ -321,6 +320,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F51864CF21AB787400C44D42 /* TableTableViewController.swift in Sources */,
 				F51864C921AB300900C44D42 /* FoldersViewController.swift in Sources */,
 				1CB685C2215C50C000558D7A /* LoginViewController.swift in Sources */,
 				1CB685C0215C50C000558D7A /* AppDelegate.swift in Sources */,

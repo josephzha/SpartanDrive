@@ -12,6 +12,6 @@ target 'SpartanDrive' do
   pod 'FacebookLogin'
   pod 'FacebookShare' 
   pod 'FirebaseUI'
-  pod 'FileExplorer', '~> 1.0.4'
+ 
 
 end
